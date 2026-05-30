@@ -131,8 +131,6 @@ int main() {
 | `--enable-shared` | 启用动态库 |
 | `--disable-fill` | 禁用内存填充功能 |
 | `--disable-utrace` | 禁用 utrace 跟踪 |
-| `--disable-stats` | 禁用统计功能 |
-| `--disable-debug` | 禁用调试模式 |
 | `--disable-cxx` | 禁用 C++ 支持 |
 
 如需自定义选项，可修改 `build_qnx.sh` 脚本中的 `configure` 参数。
