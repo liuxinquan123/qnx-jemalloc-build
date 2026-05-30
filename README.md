@@ -50,8 +50,6 @@ patching file src/pages.c
 ../build_qnx.sh aarch64le    # ARM 64-bit
 # 或
 ../build_qnx.sh x86_64       # x86 64-bit
-# 或
-../build_qnx.sh armv7le      # ARM 32-bit
 ```
 
 ### 4. 编译输出
@@ -189,19 +187,3 @@ CFLAGS="-DJEMALLOC_OS_QNX -D_QNX_SOURCE -D_POSIX_C_SOURCE=200809L"
 
 **解决方案**：QNX 的 pthread 已集成在 libc 中，无需单独链接。移除 `-lpthread` 参数。
 
-## 已测试平台
-
-| 架构 | QNX 版本 | 编译器 | 状态 |
-|------|----------|--------|------|
-| aarch64le | QNX 8.0 | GCC 12.2.0 | ✅ 通过 |
-| x86_64 | QNX 8.0 | GCC 12.2.0 | ✅ 通过 |
-
-## 参考资料
-
-- [jemalloc 官方文档](https://github.com/jemalloc/jemalloc)
-- [jemalloc 5.3.0 发布页](https://github.com/jemalloc/jemalloc/releases/tag/5.3.0)
-- [QNX 文档中心](https://www.qnx.com/developers/docs)
-
-## 许可证
-
-jemalloc 使用 BSD 2-Clause 许可证，详见源码中的 `COPYING` 文件。
